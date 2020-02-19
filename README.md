@@ -5,9 +5,9 @@
     </p>
    <a href="./License"><img alt="GPL" src="https://img.shields.io/badge/LICENSE%20-GPL-green.svg?longCache=true&style=for-the-badge"></a>
         <a href="http://lidengju.com"><img alt="Code" src="https://img.shields.io/badge/Code%20with-Love-red.svg?longCache=true&style=for-the-badge"></a>
+     <a href="http://lidengju.com"><img alt="Code" src="https://img.shields.io/badge/%E6%AD%A6%E6%B1%89%0A-%E5%8A%A0%E6%B2%B9-red.svg?longCache=true&style=for-the-badge"></a>
     <a href="https://github.com/kevinleeex/scu_thesis_2020"><img alt="Version" src="https://img.shields.io/badge/Version-2020.2-blue.svg?longCache=true&style=for-the-badge"></a>
 </div>
-
 
 
 
@@ -18,7 +18,11 @@
 >
 > SCU graduate thesis latex template.
 
+## DEMO
+
 为了方便更新，将样式文件单独作为子模块。
+
+完整的项目，请移步至[scu_thesis_2020](https://github.com/kevinleeex/scu_thesis_2020)
 
 ## :warning:NOTICE
 
