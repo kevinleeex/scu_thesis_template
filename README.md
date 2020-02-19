@@ -51,7 +51,7 @@
 | docter       | 博士                       |
 | approval     | 送审版本，不生成声明和致谢 |
 | color        | 红色川大logo，默认为黑色   |
-| center       | 居中显示公式       |
+| eqcenter       | 居中显示公式       |
 
 ## Release Notes
 
