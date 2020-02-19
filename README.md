@@ -1,6 +1,6 @@
 <div align="center"><img style="display:inline-block" width='150' src="./assets/icon.png"/><p>
     <span style="font-size: 14px">Version: 2020.02</span><br>
-    <span>"2020年四川大学研究生学业论文LaTex模版"</span><br>
+    <span>"2020年四川大学研究生学业论文LaTex模版样式文件"</span><br>
     <span style="font-size: 12px;color= #95dafc">-- Modified by <a>Kevin T. Lee</a> --</span>
     </p>
    <a href="./License"><img alt="GPL" src="https://img.shields.io/badge/LICENSE%20-GPL-green.svg?longCache=true&style=for-the-badge"></a>
@@ -11,11 +11,14 @@
 
 
 
-# 四川大学2020研究生学业论文LaTex模版
 
-根据学院给的Word模版2020版需求，并基于fork的旧版库样式，改写了模版。
+# 四川大学2020研究生学业论文LaTex模版样式文件
 
-SCU graduate thesis latex template.
+> 根据学院给的Word模版2020版需求，并基于fork的旧版库样式，改写了模版。
+>
+> SCU graduate thesis latex template.
+
+为了方便更新，将样式文件单独作为子模块。
 
 ## :warning:NOTICE
 
