@@ -39,6 +39,8 @@
 - [x] 🍔 「像素级」复刻原Word模版
 - [x] :beer:  通过```\incite``` 来进行行内引用
 - [x] :apple: bicaption图片双语题注示例
+
+
 ## Options
 
 | 参数         | 说明                       |
@@ -49,6 +51,7 @@
 | docter       | 博士                       |
 | approval     | 送审版本，不生成声明和致谢 |
 | color        | 红色川大logo，默认为黑色   |
+| center       | 居中显示公式       |
 
 ## Release Notes
 
@@ -60,45 +63,6 @@ See [Releases](https://github.com/kevinleeex/scu_thesis_2020/releases)
 图片引用示例：
 
 ![image-20200219150627160](assets/includegraphics.png)
-
-## Getting Started
-
-### Prerequisites
-
-The following softwares you should installed before build the project.
-
-- TexLive
-- MacTex(on mac)
-- Visual Studio Code (optional) with LaTex workshop plugin
-
-### Installation
-
-Clone the project.
-
-```bash
-cd path-to-dir
-git clone https://github.com/kevinleeex/scu_thesis_2020.git
-code scu_thesis_2020
-```
-
-### Usage
-
-Open and edit the ```MainBody.tex```
-
-```shell
-% 设置文档属性
-% 参数说明
-% professional: 专业学位
-% academic: 学术学位
-% master: 硕士
-% doctor: 博士
-% approval: 送审版本，将不生成声明
-% color: 红色川大logo
-% 打开MainBody.tex根据需要填入
-\documentclass[professional,master]{./Template/scuthesis2020}
-```
-
-Use **xelatex** compile the LaTex file with the recipe of ```xe->bib->xe->xe``` .
 
 ## Powered By
 
