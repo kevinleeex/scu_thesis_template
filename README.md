@@ -62,7 +62,7 @@ See [Releases](https://github.com/kevinleeex/scu_thesis_2020/releases)
 
 图片引用示例：
 
-![image-20200219150627160](assets/includegraphics.png)
+![image-20200219180137957](assets/image-20200219180137957.png)
 
 ## Powered By
 
