@@ -9,12 +9,12 @@
 
 \def\approval{0}
 \def\colortitle{0}
-\def\eqcenter{0}
+\def\eqright{0}
 \DeclareOption{doctor}{\def\thesistype{0}}
 \DeclareOption{master}{\def\thesistype{1}}
 \DeclareOption{approval}{\def\approval{1}}
 \DeclareOption{color}{\def\colortitle{1}}
-\DeclareOption{eqcenter}{\def\eqcenter{1}}
+\DeclareOption{eqright}{\def\eqright{1}}
 \DeclareOption{academic}{\def\degreetype{0}}
 \DeclareOption{professional}{\def\degreetype{1}}
 % 将文档类其他参数全部传递给 ctexbook 文档类。
@@ -289,10 +289,10 @@
 % 支持自定义列表环境
 \RequirePackage{enumitem}
 % 支持ams数学宏包
-\ifthenelse{\equal{\eqcenter}{0}}{
+\ifthenelse{\equal{\eqright}{1}}{
 	\RequirePackage[fleqn]{amsmath}
 }{}
-\ifthenelse{\equal{\eqcenter}{1}}{
+\ifthenelse{\equal{\eqright}{0}}{
 	\RequirePackage{amsmath}
 }{}
 \RequirePackage{amsfonts}
