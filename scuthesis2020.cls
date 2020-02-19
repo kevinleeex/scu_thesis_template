@@ -14,7 +14,7 @@
 \DeclareOption{master}{\def\thesistype{1}}
 \DeclareOption{approval}{\def\approval{1}}
 \DeclareOption{color}{\def\colortitle{1}}
-\DeclareOption{center}{\def\eqcenter{1}}
+\DeclareOption{eqcenter}{\def\eqcenter{1}}
 \DeclareOption{academic}{\def\degreetype{0}}
 \DeclareOption{professional}{\def\degreetype{1}}
 % 将文档类其他参数全部传递给 ctexbook 文档类。
