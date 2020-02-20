@@ -294,7 +294,7 @@
 \RequirePackage{enumitem}
 \renewcommand\labelitemi{$\bullet$}
 \setlist[itemize]{itemsep=0pt,parsep=0pt,topsep=0pt}
-\setlist[enumerate]{itemsep=0pt,parsep=0pt,topsep=0pt}
+% \setlist[enumerate]{itemsep=0pt,parsep=0pt,topsep=0pt}
 % \newenvironment{itemize*}%
 %   {\begin{itemize}[itemsep=20pt,parsep=20pt]}%
 %   {\end{itemize}}
