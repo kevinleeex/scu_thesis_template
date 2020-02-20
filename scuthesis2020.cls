@@ -59,7 +59,7 @@
 %使用geometry调整边距
 \usepackage{geometry}
 \geometry{a4paper,papersize={21cm,29.7cm}}
-\geometry{left=2.5cm,right=2.5cm,top=2.75cm,bottom=2.5cm,headsep=0.3cm,footskip=0.55cm}
+\geometry{left=2.5cm,right=2.5cm,top=2.75cm,bottom=2.5cm,headsep=0.32cm,footskip=0.55cm}
 
 \setlength{\topskip}{0cm}
 
@@ -139,7 +139,7 @@
 			\end{tabular}
 			
 		}{}
-	\ \\[10pt]
+	\ \\[28pt]
 }
 
 \newcommand{\makescucoverimage}
