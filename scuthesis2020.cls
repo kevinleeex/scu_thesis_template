@@ -556,8 +556,9 @@
 	% 定义附录环境
 	\newenvironment{appendix*}
 	{
+		\begin{center}
 		\zihao{5}
-	}
+	}{\end{center}}
 
 	% 设置文档默认行距为20pt
 	\setlength{\baselineskip}{20pt}
