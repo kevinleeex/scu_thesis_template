@@ -322,7 +322,7 @@
 	numberformat={\bfseries},
 	% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
 	aftername={\ \ },
-	beforeskip={-0.3cm},
+	beforeskip={-0.4cm},
 	afterskip={18pt}
 ]{chapter}
 % “节”标题，四号黑体，左对齐，前后段间距为10pt
