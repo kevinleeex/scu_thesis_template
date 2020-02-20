@@ -59,7 +59,8 @@
 %使用geometry调整边距
 \usepackage{geometry}
 \geometry{a4paper,papersize={21cm,29.7cm}}
-\geometry{left=2.5cm,right=2.5cm,top=2.75cm,bottom=2.5cm,head=0.3cm,headsep=0.25cm,foot=0.55cm}
+\geometry{left=2.5cm,right=2.5cm,top=2.75cm,bottom=2.5cm,headsep=0.3cm,footskip=0.55cm}
+
 \setlength{\topskip}{0cm}
 
 % 这些命令用于设定各项文档信息的具体内容。
@@ -288,6 +289,11 @@
 
 % 支持自定义列表环境
 \RequirePackage{enumitem}
+\renewcommand\labelitemi{$\bullet$}
+\setlist[itemize]{itemsep=0pt,parsep=0pt}
+% \newenvironment{itemize*}%
+%   {\begin{itemize}[itemsep=20pt,parsep=20pt]}%
+%   {\end{itemize}}
 % 支持ams数学宏包
 \ifthenelse{\equal{\eqright}{1}}{
 	\RequirePackage[fleqn]{amsmath}
@@ -545,6 +551,12 @@
 		\cleardoublepage
 		\zihao{-5}
 		\setlength{\baselineskip}{12pt}
+	}
+
+	% 定义附录环境
+	\newenvironment{appendix*}
+	{
+		\zihao{5}
 	}
 
 	% 设置文档默认行距为20pt
