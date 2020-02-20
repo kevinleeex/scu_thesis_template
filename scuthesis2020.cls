@@ -288,10 +288,13 @@
   \endgroup
 }
 
+% 公式编号格式(chapter-equation)
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 % 支持自定义列表环境
 \RequirePackage{enumitem}
 \renewcommand\labelitemi{$\bullet$}
 \setlist[itemize]{itemsep=0pt,parsep=0pt,topsep=0pt}
+\setlist[enumerate]{itemsep=0pt,parsep=0pt,topsep=0pt}
 % \newenvironment{itemize*}%
 %   {\begin{itemize}[itemsep=20pt,parsep=20pt]}%
 %   {\end{itemize}}
