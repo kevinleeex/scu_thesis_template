@@ -59,10 +59,11 @@
 %使用geometry调整边距
 \usepackage{geometry}
 \geometry{a4paper,papersize={21cm,29.7cm}}
-\geometry{left=2.5cm,right=2.5cm,top=2.75cm,bottom=2.5cm,headsep=0.32cm,footskip=0.55cm}
-
-\setlength{\topskip}{0cm}
-
+\geometry{left=2.5cm,right=2.5cm,top=2.75cm,bottom=3cm,headsep=0.32cm,footskip=1cm}
+% bottom为2.5 + 0.5cm，考虑到footer的高度，这样与word一致
+% \setlength{\topskip}{0.3cm}
+% \renewcommand{\baselinestretch}{1.5}
+\setlength{\baselineskip}{20pt}
 % 这些命令用于设定各项文档信息的具体内容。
 % 加入封面标题命令，添加副标题，自行排版
 \newcommand\unitid[1]{\def\@unitid{#1}}
@@ -321,7 +322,7 @@
 	numberformat={\bfseries},
 	% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
 	aftername={\ \ },
-	beforeskip={0pt},
+	beforeskip={-0.3cm},
 	afterskip={18pt}
 ]{chapter}
 % “节”标题，四号黑体，左对齐，前后段间距为10pt
