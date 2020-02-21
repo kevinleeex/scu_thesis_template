@@ -423,7 +423,7 @@
 		\thispagestyle{empty}
 }
 
-%设置英文内页
+%设置声明
 \newcommand{\makestatement}{
 	\ifthenelse{\equal{\approval}{0}}{
 		\begin{ENGinner}
@@ -516,7 +516,7 @@
 		\phantomsection
 		\addcontentsline{toc}{chapter}{摘要}
 		\makefancyhf{摘要}
-		\ \vspace{0cm}\par
+		\ \vspace{-0.4cm}\par
 		\begin{center}
 			\zihao{3}\heiti\textbf{摘\ 要}
 		\end{center}
@@ -536,11 +536,11 @@
 		\phantomsection
 		\addcontentsline{toc}{chapter}{Abstract}
 		\makefancyhf{Abstract}
-		\ \vspace{0cm}\par
+		\ \vspace{-0.4cm}\par
 		\begin{center}
 			\zihao{3}\rm\textbf{Abstract}
 		\end{center}
-		\ \vspace{-0.5cm}\par
+		\ \vspace{-0.4cm}\par
 		\zihao{-4}
 		% \ \\[-0.5cm]\setlength\parindent{2em}
 	}
