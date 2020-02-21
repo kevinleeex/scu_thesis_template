@@ -3,7 +3,7 @@
 % 作者：LegendaryLeo
 % 修改人：Kevin T. Lee [hello@lidengju.com]
 % 参考：pkuthss-1.2beta
-% 修改日期：2020年1月17日
+% 修改日期：2020年1月21日
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{./Template/scuthesis2020}[2020/01/17 v0.1]
 
@@ -29,7 +29,7 @@
 % 此宏包提供图形支持。
 \RequirePackage{graphicx}
 % 此包用以避免目录自引用
-\usepackage[nottoc]{tocbibind}
+% \usepackage[nottoc]{tocbibind}
 % 颜色
 \usepackage{xcolor}
 % lipsum
@@ -267,7 +267,7 @@
 % 使用tocloft宏包修改目录样式
 \RequirePackage{tocloft}
 % 目录中显示目录项和参考文献项
-\RequirePackage{tocbibind}
+\RequirePackage[nottoc]{tocbibind}
 % 使用caption2宏包修改题注样式
 % \RequirePackage{caption2}
 % 修改题注样式
@@ -386,7 +386,8 @@
 \renewcommand{\cftchapfont}{\zihao{-4}\rm\heiti}
 \renewcommand{\cftsecfont}{\zihao{-4}\rm\songti}
 \renewcommand{\cftaftertoctitle}{\hfill}
-\renewcommand{\cftbeforetoctitleskip}{24pt}
+%此处魔改目录标题前间距
+\renewcommand{\cftbeforetoctitleskip}{8pt}
 \renewcommand{\cftaftertoctitleskip}{10pt}
 % 定义引导线格式，为点，点距0.5，章节标题也使用引导线
 \renewcommand{\cftdot}{.}
