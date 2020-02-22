@@ -293,7 +293,7 @@
 % 支持自定义列表环境
 \RequirePackage{enumitem}
 \renewcommand\labelitemi{$\bullet$}
-\setlist[itemize]{itemsep=0pt,parsep=0pt,topsep=0pt}
+\setlist[itemize]{itemsep=2pt,parsep=0pt,topsep=0pt}
 % \setlist[enumerate]{itemsep=0pt,parsep=0pt,topsep=0pt}
 % \newenvironment{itemize*}%
 %   {\begin{itemize}[itemsep=20pt,parsep=20pt]}%
@@ -318,17 +318,18 @@
 % 设置标题深度为4
 \setcounter{secnumdepth}{4}
 % CTEX设置各级标题对齐方式，字号，字体及前后段间距
-% “章节”标题，小三号黑体，左对齐，前后段间距为10pt
+% “章节”标题，三号黑体，居中对齐，段前为24pt，段后18pt
 \CTEXsetup[
-	format+={\zihao{3}\rm\heiti\flushleft},
+	format+={\bfseries\zihao{3}\rm\heiti},
 	number={\arabic{chapter}},
 	numberformat={\bfseries},
 	% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
 	aftername={\ \ },
-	beforeskip={-0.4cm},
+	beforeskip={0pt},
 	afterskip={18pt}
 ]{chapter}
-% “节”标题，四号黑体，左对齐，前后段间距为10pt
+
+% “节”标题，四号黑体，左对齐，段前24pt，段后16pt
 \CTEXsetup[
 	format+={\zihao{4}\rm\heiti\flushleft},
 	% 设置序号和各级标题之间为两个空格，这里范例和写作说明不一致
@@ -336,7 +337,7 @@
 	beforeskip={24pt},
 	afterskip={6pt}
 ]{section}
-% “小节”标题，小四号黑体，左对齐，前后段间距为10pt
+% “小节”标题，小四号黑体，左对齐，段前12pt，段后6pt
 \CTEXsetup[
 	format+={\zihao{-4}\rm\heiti\flushleft},
 	% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
@@ -344,7 +345,7 @@
 	beforeskip={12pt},
 	afterskip={6pt}
 ]{subsection}
-% “次小节”标题，小四号楷体，左对齐，前后段间距为10pt
+% “次小节”标题，小四号楷体，左对齐，段前12pt，段后6pt
 \CTEXsetup[
 	format+={\zihao{-4}\rm\kaishu\flushleft},
 	% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
@@ -445,14 +446,14 @@
 		\newpage
 		\thispagestyle{empty}
 	}{}
-	\ \\
+	% \ \\
 }
 
 \newcommand{\makethanks}{
 	\ifthenelse{\equal{\approval}{0}}{
 		\include{Chapters/Thanks}
 	}{}
-	\ \\
+	% \ \\
 }
 
 	% 重定义autoref标签
@@ -492,13 +493,12 @@
 			\zihao{3}\rm
 			{\parbox[c]{15.8cm}{\centering\textbf{\@ENGtitle}}}
 			\\[4cm]
-		\textbf{A dissertation submitted to Sichuan University} \\
-		\textbf{in partial fulfillment of the requirements} \\
-		\textbf{for the degree of } \\[14pt]
-		\textbf{\@ENGdegreeclass} \\
-		\ifthenelse{\equal{\@hasmajor}{1}}{
-			\textbf{in \@ENGmajor}
-		}
+			\textbf{A dissertation submitted to Sichuan University} \\
+			\textbf{in partial fulfillment of the requirements} \\
+			\textbf{for the degree of } \\[14pt]
+			\textbf{\@ENGdegreeclass} \\
+			\ifthenelse{\equal{\@hasmajor}{1}}{
+				\textbf{in \@ENGmajor}}
 		\ \\[29pt]
 		\textbf{By} \\
 		\textbf{\@ENGauthor}\\
@@ -513,14 +513,8 @@
 	% 定义中文摘要环境
 	\newenvironment{CHSabstract}
 	{
-		\phantomsection
-		\addcontentsline{toc}{chapter}{摘要}
 		\makefancyhf{摘要}
-		\ \vspace{-0.4cm}\par
-		\begin{center}
-			\zihao{3}\heiti\textbf{摘\ 要}
-		\end{center}
-		\ \vspace{-0.5cm}\par
+		\chapter{摘\ 要}
 		\zihao{-4}
 		%\ \\[-0.5cm]
 	}
@@ -533,14 +527,9 @@
 	% 定义英文摘要环境
 	\newenvironment{ENGabstract}
 	{
-		\phantomsection
-		\addcontentsline{toc}{chapter}{Abstract}
 		\makefancyhf{Abstract}
-		\ \vspace{-0.4cm}\par
-		\begin{center}
-			\zihao{3}\rm\textbf{Abstract}
-		\end{center}
-		\ \vspace{-0.4cm}\par
+		\rm
+		\chapter{\textbf{Abstract}}
 		\zihao{-4}
 		% \ \\[-0.5cm]\setlength\parindent{2em}
 	}
@@ -567,7 +556,6 @@
 
 	% 设置文档默认行距为20pt
 	\setlength{\baselineskip}{20pt}
-	% \renewcommand{\baselineskip}{20pt}
 	% 加载cleveref宏，支持智能化引用
 	\RequirePackage{cleveref}
 	\crefformat{chapter}{第~#2#1#3~章}
