@@ -395,10 +395,16 @@
 \renewcommand{\cftdotsep}{0.5}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
 % 定义章节目录项前后距
-\setlength{\cftbeforechapskip}{6pt}
+\renewcommand{\cftbeforechapskip}{6pt}
+% \renewcommand\cftchapafterpnum{\vskip0pt}
+% \renewcommand{\cftbeforesecskip}{6pt}
+% \renewcommand\cftsecafterpnum{\vskip0pt}
+% \renewcommand{\cftbeforesubsecskip}{6pt}
+% \renewcommand\cftsubsecafterpnum{\vskip0pt}
 
 % 定义\maketoc命令，将自动生成符合要求的目录。
 \newcommand{\maketoc}{
+	\makefancyhdr
 	\cleardoublepage
 	\tableofcontents
 	\thispagestyle{fancy}
