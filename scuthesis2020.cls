@@ -288,6 +288,9 @@
   \endgroup
 }
 
+%定义破折号
+\newcommand{\cdash}{\text{ —— }}
+
 % 公式编号格式(chapter-equation)
 \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 % 支持自定义列表环境
@@ -461,6 +464,7 @@
 	}{}
 	% \ \\
 }
+
 
 	% 重定义autoref标签
 	%\renewcommand{\partautorefname}{\part}
