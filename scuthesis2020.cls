@@ -289,8 +289,7 @@
 }
 
 %定义破折号
-\newcommand{\cdash}{\text{ —— }}
-
+\newcommand{\cdash}[0]{\text{\ ——\ }}
 % 公式编号格式(chapter-equation)
 \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 % 支持自定义列表环境
