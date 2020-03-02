@@ -274,10 +274,9 @@
 \renewcommand{\captionfont}{
 \zihao{5}\rm\songti}
 % \renewcommand{\captionlabeldelim}{~}
-% 使用natbib宏包修改参考文献行距和参考标记样式
-%               上标	方括号	逗号分隔	自动排序分类
-% \RequirePackage[super,square,comma,sort&compress]{natbib}
-% \setlength{\bibsep}{0.5ex}
+% 使用natbib宏包修改参考文献段间距
+\RequirePackage{natbib}
+\setlength{\bibsep}{0pt}
 % 定义 \incite 命令，用于如“文献[1]”这样的引用
 \newcommand*{\incite}{}
 \DeclareRobustCommand*{\incite}[1]{
@@ -552,8 +551,8 @@
 	\newenvironment{reference}
 	{
 		\cleardoublepage
-		\zihao{-5}
-		\setlength{\baselineskip}{12pt}
+		\zihao{5}
+		\setlength{\baselineskip}{16pt}
 	}
 
 	% 定义附录环境
