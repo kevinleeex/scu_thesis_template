@@ -383,7 +383,7 @@
 }
 
 % 定义目录标题格式，小三号黑体居中，段前后距10pt
-\renewcommand\contentsname{目\ 录}
+\renewcommand\contentsname{目\hspace{1em}录}
 \renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\rm\heiti}
 \renewcommand{\cftchapfont}{\zihao{-4}\rm\heiti}
 \renewcommand{\cftsecfont}{\zihao{-4}\rm\songti}
@@ -442,7 +442,7 @@
 		{
 			\makechaptertitlecenter
 			\setlength{\baselineskip}{20pt}
-			\chapter*{声\ 明}
+			\chapter*{声\hspace{1em}明}
 		本人声明所呈交的学位论文是本人在导师指导下（或联合培养导师组合作指导下）进行的研究工作及取得的研究成果。据我所知，除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写过的研究成果，也不包含为获得四川大学或其他教育机构的学位或证书而使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示谢意。
 
 		本学位论文成果是本人在四川大学读书期间在导师指导下（或联合培养导师组合作指导下）取得的，论文成果归四川大学所有（或联合培养单位共有），特此声明。
@@ -458,6 +458,7 @@
 
 \newcommand{\makethanks}{
 	\ifthenelse{\equal{\approval}{0}}{
+		\makefancyhf{致谢}
 		\include{Chapters/Thanks}
 	}{}
 	% \ \\
@@ -522,7 +523,7 @@
 	\newenvironment{CHSabstract}
 	{
 		\makefancyhf{摘要}
-		\chapter{摘\ 要}
+		\chapter{摘\hspace{1em}要}
 		\zihao{-4}
 		%\ \\[-0.5cm]
 	}
