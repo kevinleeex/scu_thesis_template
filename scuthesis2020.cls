@@ -458,7 +458,6 @@
 
 \newcommand{\makethanks}{
 	\ifthenelse{\equal{\approval}{0}}{
-		\makefancyhf{致谢}
 		\include{Chapters/Thanks}
 	}{}
 	% \ \\
@@ -562,6 +561,13 @@
 		\begin{center}
 		\zihao{5}
 	}{\end{center}}
+
+	% 定义致谢环境
+	\newenvironment{thanks*}
+	{	
+		\makefancyhf{致谢}
+		\chapter{致\hspace{1em}谢}
+	}{}
 
 	% 设置文档默认行距为20pt
 	\setlength{\baselineskip}{20pt}
