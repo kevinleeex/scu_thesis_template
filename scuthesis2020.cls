@@ -405,10 +405,11 @@
 
 % 定义\maketoc命令，将自动生成符合要求的目录。
 \newcommand{\maketoc}{
-	\makefancyhdr
+	\makefancyhf{目录}
 	\cleardoublepage
 	\tableofcontents
 	\thispagestyle{fancy}
+	\makefancyhdr
 }
 
 % 设定封面页格式。
