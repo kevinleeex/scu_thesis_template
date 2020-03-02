@@ -1,12 +1,12 @@
 <div align="center"><img style="display:inline-block" width='150' src="./assets/icon.png"/><p>
-    <span style="font-size: 14px">Version: 2020.02.22</span><br>
+    <span style="font-size: 14px">Version: 2020.03.02</span><br>
     <span>"2020年四川大学研究生学业论文LaTex模版样式文件"</span><br>
     <span style="font-size: 12px;color= #95dafc">-- Modified by <a>Kevin T. Lee</a> --</span>
     </p>
    <a href="./License"><img alt="GPL" src="https://img.shields.io/badge/LICENSE%20-GPL-green.svg?longCache=true&style=for-the-badge"></a>
         <a href="http://lidengju.com"><img alt="Code" src="https://img.shields.io/badge/Code%20with-Love-red.svg?longCache=true&style=for-the-badge"></a>
      <a href="http://lidengju.com"><img alt="Code" src="https://img.shields.io/badge/%E6%AD%A6%E6%B1%89%0A-%E5%8A%A0%E6%B2%B9-red.svg?longCache=true&style=for-the-badge"></a>
-    <a href="https://github.com/kevinleeex/scu_thesis_2020"><img alt="Version" src="https://img.shields.io/badge/Version-2020.02.22-blue.svg?longCache=true&style=for-the-badge"></a>
+    <a href="https://github.com/kevinleeex/scu_thesis_2020"><img alt="Version" src="https://img.shields.io/badge/Version-2020.03.02-blue.svg?longCache=true&style=for-the-badge"></a>
 </div>
 
 
@@ -14,9 +14,8 @@
 
 # 四川大学2020研究生学业论文LaTex模版样式文件
 
-> 根据学院给的Word模版2020版需求，并基于fork的旧版库样式，改写了模版。
->
-> SCU graduate thesis latex template.
+根据学院给的2020版《研究生学位论文规范写作指南》Word模版需求([导出PDF](./Reference%20Document/1-3%20《研究生学位论文规范写作指南》.pdf))，并基于fork的旧版库样式，改写了模版。
+SCU graduate thesis latex template.
 
 ## DEMO
 
@@ -60,17 +59,6 @@
 | docter       | 博士                       |
 | approval     | 送审版本，不生成声明和致谢 |
 | color        | 红色川大logo，默认为黑色   |
-
-## Release Notes
-
-See [Releases](https://github.com/kevinleeex/scu_thesis_2020/releases)
-
-## Previews
-<img src="./assets/screenshot.png" alt="Screenshot" style="zoom:30%;" />
-
-图片引用示例：
-
-![image-20200219180137957](assets/image-20200219180137957.png)
 
 ## Powered By
 
