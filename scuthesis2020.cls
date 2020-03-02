@@ -3,7 +3,7 @@
 % 作者：LegendaryLeo
 % 修改人：Kevin T. Lee [hello@lidengju.com]
 % 参考：pkuthss-1.2beta
-% 修改日期：2020年1月21日
+% 修改日期：2020年3月2日
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{./Template/scuthesis2020}[2020/01/17 v0.1]
 
