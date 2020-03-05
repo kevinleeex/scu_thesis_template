@@ -28,8 +28,8 @@
 \RequirePackage{ifthen}
 % 此宏包提供图形支持。
 \RequirePackage{graphicx}
-% 此包用以避免目录自引用
-% \usepackage[nottoc]{tocbibind}
+% 表格多行支持
+\usepackage{multirow}
 % 颜色
 \usepackage{xcolor}
 % lipsum
