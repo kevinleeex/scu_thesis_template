@@ -267,6 +267,8 @@
 % 使用epstopdf宏包重定向eps输出路径，避免图片错误
 \RequirePackage[outdir=./]{epstopdf}
 
+% 定义表格中的多行单元
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}} 
 % 使用hyperref宏包去除索引上的颜色标记
 \RequirePackage{hyperref}
 \hypersetup{pdfborder=0 0 0}
