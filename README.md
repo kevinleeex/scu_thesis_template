@@ -48,6 +48,7 @@ SCU graduate thesis latex template.
 - [x] 🍟 ```\bicaption```图片双语题注示例
 - [x] 🍕 ```\cdash```公式说明的破折号
 - [x] 🌮 ```\cref```智能引用
+- [x] 🥘 ```\tabincell```多行单元格
 
 ## Options
 
