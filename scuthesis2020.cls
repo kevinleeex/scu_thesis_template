@@ -43,6 +43,11 @@
 \captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
 \captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
 
+% 定义表格中的多行单元
+\usepackage{multirow}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+% 引入landscape排版
+\usepackage{lscape}
 % 引入算法包
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -267,9 +272,6 @@
 % 使用epstopdf宏包重定向eps输出路径，避免图片错误
 \RequirePackage[outdir=./]{epstopdf}
 
-% 定义表格中的多行单元
-\usepackage{multirow}
-\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}} 
 % 使用hyperref宏包去除索引上的颜色标记
 \RequirePackage{hyperref}
 \hypersetup{pdfborder=0 0 0}
