@@ -2,19 +2,18 @@
 % 文件描述：以 ctexbook 文档类为基础，定义四川大学学位论文文档类
 % 作者：LegendaryLeo
 % 修改人：Kevin T. Lee [hello@lidengju.com]
-% 参考：pkuthss-1.2beta
-% 修改日期：2020年3月2日
+% 修改日期：2020年3月13日
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{./Template/scuthesis2020}[2020/01/17 v0.1]
 
 \def\approval{0}
 \def\colortitle{0}
-\def\eqright{0}
+\def\secret{0}
 \DeclareOption{doctor}{\def\thesistype{0}}
 \DeclareOption{master}{\def\thesistype{1}}
 \DeclareOption{approval}{\def\approval{1}}
 \DeclareOption{color}{\def\colortitle{1}}
-\DeclareOption{eqright}{\def\eqright{1}}
+\DeclareOption{secret}{\def\secret{1}}
 \DeclareOption{academic}{\def\degreetype{0}}
 \DeclareOption{professional}{\def\degreetype{1}}
 % 将文档类其他参数全部传递给 ctexbook 文档类。
@@ -79,6 +78,8 @@
 % 加入封面标题命令，添加副标题，自行排版
 \newcommand\unitid[1]{\def\@unitid{#1}}
 \newcommand\STUnumber[1]{\def\@STUnumber{#1}}
+\newcommand\securityClassification[1]{\def\@securityClassification{#1}}
+\newcommand\securityYear[1]{\def\@securityYear{#1}}
 \newcommand\CoverTitle[1]{\def\@CoverTitle{#1}}
 \newcommand\CoverSubTitle[1]{\def\@CoverSubTitle{#1}}
 % \newcommand\title[1]{\def\@title{#1}}
@@ -134,6 +135,14 @@
 \newcommand{\fonta}{
 	\zihao{3}\songti
 }
+\newcommand{\makesecret}{
+	\ifthenelse{\equal{\secret}{1}}{
+		\\
+		{\makebox[2.2cm][s]{\textbf{密级：}}}       & \hspace{-10pt}\textbf{\@securityClassification\quad\@securityYear 年}
+	}{}
+
+}
+
 \newcommand{\makescucoverhead}
 {
 \ifthenelse{\equal{\approval}{0}}{
@@ -141,6 +150,7 @@
 		\begin{tabular}{cl}
 			{\makebox[2.2cm][s]{\textbf{单位代码：}}}  & \hspace{-10pt}\textbf{\@unitid}\\
 			{\makebox[2.2cm][s]{\textbf{学号：}}}       & \hspace{-10pt}\textbf{\@STUnumber}
+			\makesecret
 		\end{tabular}
 	}{}
 \ifthenelse{\equal{\approval}{1}}{
@@ -148,6 +158,7 @@
 		\begin{tabular}{cl}
 			{\makebox[2.2cm][s]{\textbf{单位代码：}}}  & \hspace{-10pt}\textbf{\@unitid}\\
 			{\makebox[2.2cm][s]{\textbf{送审编号：}}}       & \hspace{-10pt}\textbf{\@STUnumber}
+			\makesecret
 		\end{tabular}
 		
 	}{}
@@ -311,12 +322,6 @@
 %   {\begin{itemize}[itemsep=20pt,parsep=20pt]}%
 %   {\end{itemize}}
 % 支持ams数学宏包
-\ifthenelse{\equal{\eqright}{1}}{
-\RequirePackage[fleqn]{amsmath}
-}{}
-\ifthenelse{\equal{\eqright}{0}}{
-\RequirePackage{amsmath}
-}{}
 \RequirePackage{amsfonts}
 \RequirePackage{amsthm}
 \RequirePackage{mathtools}
