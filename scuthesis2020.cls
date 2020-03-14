@@ -27,21 +27,10 @@
 \RequirePackage{ifthen}
 % 此宏包提供图形支持。
 \RequirePackage{graphicx}
-% 此包用以避免目录自引用
-% \usepackage[nottoc]{tocbibind}
 % 颜色
 \usepackage{xcolor}
 % lipsum
 \usepackage{lipsum}
-% 此包用于双语图表标题
-\usepackage{bicaption}
-\usepackage{subcaption}
-\captionsetup{font={bf}}
-\captionsetup[figure][bi-first]{name=图,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
-\captionsetup[figure][bi-second]{name=Figure,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
-\captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
-\captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
-
 % 定义表格中的多行单元
 \usepackage{multirow}
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
@@ -55,16 +44,19 @@
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
 % GBT7714引用格式
 \usepackage[super]{gbt7714}
+% 此包用于双语图表标题
+\usepackage{bicaption}
+\usepackage{subcaption}
+\captionsetup{font={bf}}
+\captionsetup[figure][bi-first]{name=图,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
+\captionsetup[figure][bi-second]{name=Figure,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
+\captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
+\captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
 %设置字体
 \usepackage{xeCJK}
 \usepackage{fontspec} 
 \setCJKmonofont{SimSun}
 \setmainfont{Times New Roman}
-% 设置A4页面
-% \RequirePackage{anysize}
-% \papersize{29.7cm}{21cm}
-% % 左边距 2.5cm，右边距 2.5cm，上边距 2.75cm，下边距2.5cm
-% \marginsize{2.5cm}{2.5cm}{2.75cm}{2.5cm}
 
 %使用geometry调整边距
 \usepackage{geometry}
@@ -82,11 +74,9 @@
 \newcommand\securityYear[1]{\def\@securityYear{#1}}
 \newcommand\CoverTitle[1]{\def\@CoverTitle{#1}}
 \newcommand\CoverSubTitle[1]{\def\@CoverSubTitle{#1}}
-% \newcommand\title[1]{\def\@title{#1}}
 \newcommand\ENGtitle[1]{\def\@ENGtitle{#1}}
 \newcommand\school[1]{\def\@school{#1}}
 \newcommand\ENGschool[1]{\def\@ENGschool{#1}}
-% \newcommand\author[1]{\def\@author{#1}}
 \newcommand\ENGauthor[1]{\def\@ENGauthor{#1}}
 \newcommand\supervisor[1]{\def\@supervisor{#1}}
 \newcommand\ENGsupervisor[1]{\def\@ENGsupervisor{#1}}
