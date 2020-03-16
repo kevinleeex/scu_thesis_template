@@ -1,12 +1,12 @@
 <div align="center"><img style="display:inline-block" width='150' src="./assets/icon.png"/><p>
-    <span style="font-size: 14px">Version: 2020.03.13</span><br>
+    <span style="font-size: 14px">Version: 2020.03.16</span><br>
     <span>"2020年四川大学研究生学业论文LaTex模版样式文件"</span><br>
     <span style="font-size: 12px;color= #95dafc">-- Modified by <a>Kevin T. Lee</a> --</span>
     </p>
    <a href="./License"><img alt="GPL" src="https://img.shields.io/badge/LICENSE%20-GPL-green.svg?longCache=true&style=for-the-badge"></a>
         <a href="http://lidengju.com"><img alt="Code" src="https://img.shields.io/badge/Code%20with-Love-red.svg?longCache=true&style=for-the-badge"></a>
      <a href="http://lidengju.com"><img alt="Code" src="https://img.shields.io/badge/%E6%AD%A6%E6%B1%89%0A-%E5%8A%A0%E6%B2%B9-red.svg?longCache=true&style=for-the-badge"></a>
-    <a href="https://github.com/kevinleeex/scu_thesis_2020"><img alt="Version" src="https://img.shields.io/badge/Version-2020.03.13-blue.svg?longCache=true&style=for-the-badge"></a>
+    <a href="https://github.com/kevinleeex/scu_thesis_2020"><img alt="Version" src="https://img.shields.io/badge/Version-2020.03.16-blue.svg?longCache=true&style=for-the-badge"></a>
 </div>
 
 
@@ -31,8 +31,7 @@ SCU graduate thesis latex template.
 - 一些标题描述间隔一个汉字符，范例为一个空格符，修改为**一个汉字符**。
 - 封面页校名标题没有居中，修改为**居中**。
 - 描述中公式居中，范例为右对齐，修改为**居中**。
-- 描述中图和表题注都为宋体加粗，范例的表为黑体，修改为**宋体加粗**。
-- 描述中目录的节间距为段前6pt，段后0pt，范例为段前0pt，段后0pt，修改为**段前6pt**。
+- 描述中图和表题注都为宋体加粗，范例的表为黑体，修改为**宋体加粗**
 - 没有保留封面等内容的说明内容。
 - 部分内容由于排版软件的关系有些微差别。
 
@@ -47,8 +46,22 @@ SCU graduate thesis latex template.
 - [x] 🧀  通过```\incite``` 来进行行内引用
 - [x] 🍟 ```\bicaption```图片双语题注示例
 - [x] 🍕 ```\cdash```公式说明的破折号
-- [x] 🌮 ```\cref```智能引用
+- [x] 🌮 ```\cref```智能参考
 - [x] 🥘 ```\tabincell```多行单元格
+- [x] 🍗 ```\makefigtablist```添加图表目录
+
+## Options
+
+| 参数         | 说明                       |
+| ------------ | -------------------------- |
+| professional | 专业学位                   |
+| academic     | 学术学位                   |
+| master       | 硕士                       |
+| docter       | 博士                       |
+| approval     | 送审版本，不生成声明和致谢 |
+| secret       | 保密论文，将显示密级       |
+| color        | 红色川大logo，默认为黑色   |
+|kfont=        | 字体库，可根据操作系统填写，Mac OS X推荐填入kfont=mac以解决字重问题|
 
 ## Options
 

@@ -6,6 +6,9 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{./Template/scuthesis2020}[2020/01/17 v0.1]
 
+% 加载key value options
+\RequirePackage{xkeyval}
+
 \def\approval{0}
 \def\colortitle{0}
 \def\secret{0}
@@ -16,50 +19,60 @@
 \DeclareOption{secret}{\def\secret{1}}
 \DeclareOption{academic}{\def\degreetype{0}}
 \DeclareOption{professional}{\def\degreetype{1}}
+
+\newcommand{\kkfont}{}
+\DeclareOptionX{kfont}{\renewcommand{\kkfont}{#1}}
+% \DeclareOptionX*{\PackageWarning{scuthesis2020}{`\CurrentOption' ignored}}% For unknown options
+\ExecuteOptionsX{kfont=}% Preset keys, '' being the default here
+\ProcessOptionsX\relax
+
 % 将文档类其他参数全部传递给 ctexbook 文档类。
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{ctexbook}}
 \ProcessOptions\relax
 % 此文档类以 ctexbook 为基础，设定页面尺寸为 A4，默认字号为小四号。
 % CJKfntef 宏包提供了 \maketitle 中用到的 \CJKunderline 命令。
+\LoadClass[a4paper,UTF8,twoside, openright, zihao=-4,fontset=\kkfont]{ctexbook}
+% 加入hyperref超链接参考
+\RequirePackage{hyperref}
 % fancyhdr 宏包提供了方便使用的命令用于设置页眉、页脚。
-\LoadClass[fntef, a4paper, fancyhdr, cs4size,UTF8,hyperref,twoside,openright]{ctexbook}
+\RequirePackage{fancyhdr}
 % 加入判断支持
 \RequirePackage{ifthen}
 % 此宏包提供图形支持。
 \RequirePackage{graphicx}
 % 颜色
-\usepackage{xcolor}
+\RequirePackage{xcolor}
 % lipsum
-\usepackage{lipsum}
+\RequirePackage{lipsum}
 % 定义表格中的多行单元
-\usepackage{multirow}
+\RequirePackage{multirow}
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 % 引入landscape排版
-\usepackage{lscape}
+\RequirePackage{lscape}
 % 引入算法包
-\usepackage{algorithm}
-\usepackage{algorithmic}
+\RequirePackage{algorithm}
+\RequirePackage{algorithmic}
 \floatname{algorithm}{算法}  
 \renewcommand{\algorithmicrequire}{\textbf{输入:}}  
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
 % GBT7714引用格式
-\usepackage[super]{gbt7714}
+\RequirePackage[super]{gbt7714}
 % 此包用于双语图表标题
-\usepackage{bicaption}
-\usepackage{subcaption}
+\RequirePackage[list=off]{bicaption}
+\RequirePackage{subcaption}
 \captionsetup{font={bf}}
 \captionsetup[figure][bi-first]{name=图,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
 \captionsetup[figure][bi-second]{name=Figure,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
 \captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
 \captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
 %设置字体
-\usepackage{xeCJK}
-\usepackage{fontspec} 
-\setCJKmonofont{SimSun}
+% \RequirePackage{xeCJK}
+\RequirePackage{fontspec} 
+% \setCJKmonofont{Simsun}
 \setmainfont{Times New Roman}
 
 %使用geometry调整边距
-\usepackage{geometry}
+\RequirePackage{geometry}
 \geometry{a4paper,papersize={21cm,29.7cm}}
 \geometry{left=2.5cm,right=2.5cm,top=2.75cm,bottom=3cm,headsep=0.32cm,footskip=1cm}
 % bottom为2.5 + 0.5cm，考虑到footer的高度，这样与word一致
@@ -278,8 +291,8 @@
 \hypersetup{pdfborder=0 0 0}
 % 使用tocloft宏包修改目录样式
 \RequirePackage{tocloft}
-% 目录中显示目录项和参考文献项
-\RequirePackage[nottoc]{tocbibind}
+% 目录中不显示目录项、图表目录项
+\RequirePackage[nottoc,notlof,notlot]{tocbibind}
 % 使用caption2宏包修改题注样式
 % \RequirePackage{caption2}
 % 修改题注样式
@@ -325,54 +338,64 @@
 % 设置标题深度为4
 \setcounter{secnumdepth}{4}
 % CTEX设置各级标题对齐方式，字号，字体及前后段间距
-% “章节”标题，三号黑体，居中对齐，段前为24pt，段后18pt
-\CTEXsetup[
-format+={\bfseries\zihao{3}\rm\heiti},
-number={\arabic{chapter}},
-numberformat={\bfseries},
-% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
-aftername={\ \ },
-beforeskip={0pt},
-afterskip={18pt}
-]{chapter}
-
-% “节”标题，四号黑体，左对齐，段前24pt，段后16pt
-\CTEXsetup[
-format+={\zihao{4}\rm\heiti\flushleft},
-% 设置序号和各级标题之间为两个空格，这里范例和写作说明不一致
-aftername={\ \ },
-beforeskip={24pt},
-afterskip={6pt}
-]{section}
-% “小节”标题，小四号黑体，左对齐，段前12pt，段后6pt
-\CTEXsetup[
-format+={\zihao{-4}\rm\heiti\flushleft},
-% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
-aftername={\ \ },
-beforeskip={12pt},
-afterskip={6pt}
-]{subsection}
-% “次小节”标题，小四号楷体，左对齐，段前12pt，段后6pt
-\CTEXsetup[
-format+={\zihao{-4}\rm\kaishu\flushleft},
-% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
-aftername={\ \ },
-beforeskip={12pt},
-afterskip={6pt}
-]{subsubsection}
-% “段”标题，小四号楷体，左对齐，前后段间距为0pt
 \renewcommand{\theparagraph}{(\arabic{paragraph})}
-\CTEXsetup[
-name={,},
-number={\theparagraph},
-format+={\zihao{-4}\rm\kaishu\flushleft},
-beforeskip={0pt},
-afterskip={0pt}
-]{paragraph}
+\ctexset{
+	% “章节”标题，三号黑体，居中对齐，段前为24pt，段后18pt
+	chapter= {
+		format+={\rm\zihao{3}\heiti\bfseries},
+		number={\arabic{chapter}},
+		numberformat={\bfseries},
+		% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
+		aftername={\hspace{\ccwd}},
+		beforeskip={0pt},
+		afterskip={18pt}
+	},
+	% “节”标题，四号黑体，左对齐，段前24pt，段后16pt
+	section={
+		format+={\rm\zihao{4}\heiti\bfseries\flushleft},
+		% 设置序号和各级标题之间为两个空格，这里范例和写作说明不一致
+		aftername={\hspace{\ccwd}},
+		beforeskip={24pt},
+		afterskip={6pt}
+	},
+	% “小节”标题，小四号黑体，左对齐，段前12pt，段后6pt
+	subsection={
+		format+={\zihao{-4}\rm\heiti\flushleft},
+		% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
+		aftername={\hspace{\ccwd}},
+		beforeskip={12pt},
+		afterskip={6pt}
+	},
+	% “次小节”标题，小四号楷体，左对齐，段前12pt，段后6pt
+	subsubsection={
+		format+={\zihao{-4}\rm\kaishu\flushleft},
+			% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
+			aftername={\hspace{\ccwd}},
+			beforeskip={12pt},
+			afterskip={6pt}
+	},
+	% “段”标题，小四号楷体，左对齐，前后段间距为0pt
+	paragraph={
+		name={,},
+		number={\theparagraph},
+		format+={\zihao{-4}\rm\kaishu\flushleft},
+		beforeskip={0pt},
+		afterskip={0pt}
+	}
+}
+
 % 定义\makechaptertitlecenter命令，可使命令后章节标题居中
-\newcommand{\makechaptertitlecenter}{\CTEXsetup[format+={\center}]{chapter}}
+\newcommand{\makechaptertitlecenter}{\ctexset{
+		chapter={
+			format+={\center}
+		}
+	}}
 % 定义\makechaptertitleleft命令，可使命令后章节标题居左
-\newcommand{\makechaptertitleleft}{\CTEXsetup[format+={\flushleft}]{chapter}}
+\newcommand{\makechaptertitleleft}{\ctexset{
+		chapter={
+			format+={\flushleft}
+		}
+	}}
 
 
 % 定义\fillinblank命令，用下划线填充指定的空间。
@@ -388,9 +411,9 @@ afterskip={0pt}
 \end{figure}
 }
 
-% 定义目录标题格式，小三号黑体居中，段前后距10pt
+% 定义目录标题格式，三号黑体居中，段前后距10pt
 \renewcommand\contentsname{目\hspace{1em}录}
-\renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\rm\heiti}
+\renewcommand{\cfttoctitlefont}{\hfill\zihao{3}\rm\heiti\bfseries}
 \renewcommand{\cftchapfont}{\zihao{-4}\rm\heiti}
 \renewcommand{\cftsecfont}{\zihao{-4}\rm\songti}
 \renewcommand{\cftaftertoctitle}{\hfill}
@@ -403,11 +426,6 @@ afterskip={0pt}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
 % 定义章节目录项前后距
 \renewcommand{\cftbeforechapskip}{6pt}
-% \renewcommand\cftchapafterpnum{\vskip0pt}
-% \renewcommand{\cftbeforesecskip}{6pt}
-% \renewcommand\cftsecafterpnum{\vskip0pt}
-% \renewcommand{\cftbeforesubsecskip}{6pt}
-% \renewcommand\cftsubsecafterpnum{\vskip0pt}
 
 % 定义\maketoc命令，将自动生成符合要求的目录。
 \newcommand{\maketoc}{
@@ -416,6 +434,37 @@ afterskip={0pt}
 \tableofcontents
 \thispagestyle{fancy}
 \makefancyhdr
+}
+
+% 定义图表目录标题格式，三号黑体居中，段前后距10pt
+\renewcommand\listfigurename{插图目录}
+\renewcommand\listtablename{表格目录}
+\renewcommand{\cftloftitlefont}{\hfill\zihao{3}\rm\heiti\bfseries}
+\renewcommand{\cftlottitlefont}{\hfill\zihao{3}\rm\heiti\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftafterlottitle}{\hfill}
+%此处魔改目录标题前间距
+\renewcommand{\cftbeforeloftitleskip}{8pt}
+\renewcommand{\cftbeforelottitleskip}{8pt}
+\renewcommand{\cftafterloftitleskip}{10pt}
+\renewcommand{\cftafterlottitleskip}{10pt}
+
+\newcommand{\loflabel}{图.}
+\newcommand{\lotlabel}{表.}
+\newlength{\mylen}
+\renewcommand{\cftfigpresnum}{\figurename\enspace}
+\settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
+\addtolength{\cftfignumwidth}{\mylen}
+
+\renewcommand{\cfttabpresnum}{\tablename\enspace}
+\settowidth{\mylen}{\cfttabpresnum\cfttabaftersnum}
+\addtolength{\cfttabnumwidth}{\mylen}
+% 生成图表目录
+\newcommand{\makefigtablist}{
+		\cleardoublepage
+		\listoffigures
+		\cleardoublepage
+		\listoftables
 }
 
 % 设定封面页格式。
