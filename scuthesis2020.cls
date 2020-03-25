@@ -56,7 +56,8 @@
 \renewcommand{\algorithmicrequire}{\textbf{输入:}}  
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
 % GBT7714引用格式
-\RequirePackage[super]{gbt7714}
+\RequirePackage{gbt7714}
+
 % 此包用于双语图表标题
 \RequirePackage[list=off]{bicaption}
 \RequirePackage{subcaption}
@@ -80,7 +81,6 @@
 % \renewcommand{\baselinestretch}{1.5}
 \setlength{\baselineskip}{20pt}
 % 这些命令用于设定各项文档信息的具体内容。
-% 加入封面标题命令，添加副标题，自行排版
 \newcommand\unitid[1]{\def\@unitid{#1}}
 \newcommand\STUnumber[1]{\def\@STUnumber{#1}}
 \newcommand\securityClassification[1]{\def\@securityClassification{#1}}
@@ -189,7 +189,9 @@
 \begin{tabular}{lc}
 	{\heiti\zihao{3}\makebox[1.25cm][s]{\textbf{题目：}}}  & \hspace{-10pt}\fillinblank{10.5cm}{\heiti\zihao{3}\textbf{\@CoverTitle}}
 	\\[25pt]
+	\ifthenelse{\equal{\@CoverSubTitle}{}}{}{
 	{\makebox[2cm][s]{}}       & \hspace{-10pt}\fillinblank{10.5cm}{\heiti\zihao{3}\textbf{\@CoverSubTitle}}
+	}
 \end{tabular}
 \\[45pt]
 }
