@@ -87,6 +87,7 @@
 \newcommand\securityYear[1]{\def\@securityYear{#1}}
 \newcommand\CoverTitle[1]{\def\@CoverTitle{#1}}
 \newcommand\CoverSubTitle[1]{\def\@CoverSubTitle{#1}}
+\renewcommand{\title}[1]{\def\@title{#1}}
 \newcommand\ENGtitle[1]{\def\@ENGtitle{#1}}
 \newcommand\school[1]{\def\@school{#1}}
 \newcommand\ENGschool[1]{\def\@ENGschool{#1}}
@@ -259,8 +260,8 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0.8pt}
 \fancyhead[CE]{\zihao{-5}\songti
-	% The chapter title for even page
-	四川大学\thesisname}
+	% The thesis title for even page
+	\@title}
 
 \renewcommand{\headrulewidth}{0.8pt}
 \fancyhead[CO]{\zihao{-5}\songti
@@ -276,7 +277,7 @@
 \renewcommand{\headrulewidth}{0.8pt}
 \fancyhead[CE]{\zihao{-5}\songti
 	% The chapter title for even page
-	四川大学\thesisname}
+	\@title}
 
 \renewcommand{\headrulewidth}{0.8pt}
 \fancyhead[CO]{\zihao{-5}\songti
