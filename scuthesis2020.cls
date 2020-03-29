@@ -68,7 +68,7 @@
 \captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont=bf,font={bf,footnotesize}}
 %设置字体
 % \RequirePackage{xeCJK}
-% \RequirePackage{fontspec} 
+\RequirePackage{fontspec} 
 % \setCJKmonofont{Simsun}
 \setmainfont{Times New Roman}
 
