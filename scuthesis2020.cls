@@ -55,8 +55,6 @@
 \floatname{algorithm}{算法}  
 \renewcommand{\algorithmicrequire}{\textbf{输入:}}  
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
-% 引入伪代码包
-\RequirePackage{algpseudocode}
 % GBT7714引用格式
 \RequirePackage{gbt7714}
 
