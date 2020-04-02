@@ -365,6 +365,7 @@
 	subsection={
 		format+={\zihao{-4}\rm\heiti\flushleft},
 		% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
+		numberformat={\sffamily},
 		aftername={\hspace{\ccwd}},
 		beforeskip={12pt},
 		afterskip={6pt}
@@ -372,10 +373,11 @@
 	% “次小节”标题，小四号楷体，左对齐，段前12pt，段后6pt
 	subsubsection={
 		format+={\zihao{-4}\rm\kaishu\flushleft},
-			% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
-			aftername={\hspace{\ccwd}},
-			beforeskip={12pt},
-			afterskip={6pt}
+		numberformat={\sffamily},
+		% 设置序号和各级标题之间为一个空格，这里范例和写作说明不一致
+		aftername={\hspace{\ccwd}},
+		beforeskip={12pt},
+		afterskip={6pt}
 	},
 	% “段”标题，小四号楷体，左对齐，前后段间距为0pt
 	paragraph={
