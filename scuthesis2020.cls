@@ -62,10 +62,10 @@
 \RequirePackage[list=off]{bicaption}
 \RequirePackage{subcaption}
 \captionsetup{font={bf},bi-slc=0}
-\captionsetup[figure][bi-first]{name=图,labelsep=quad,labelfont=bf,font={rm,bf,footnotesize}}
-\captionsetup[figure][bi-second]{name=Figure,labelsep=quad,labelfont=bf,font={rm,bf,footnotesize}}
-\captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont=bf,font={rm,bf,footnotesize}}
-\captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont=bf,font={rm,bf,footnotesize}}
+\captionsetup[figure][bi-first]{name=图,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
+\captionsetup[figure][bi-second]{name=Figure,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
+\captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
+\captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
 %设置字体
 % \RequirePackage{xeCJK}
 \RequirePackage{fontspec}
