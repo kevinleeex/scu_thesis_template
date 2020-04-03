@@ -67,6 +67,8 @@
 \captionsetup[figure][bi-second]{name=Figure,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
 \captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
 \captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
+% 修改图题和正文间距
+% \setlength{\belowcaptionskip}{-10pt}
 %设置字体
 \RequirePackage{xeCJK}
 \RequirePackage{fontspec}
