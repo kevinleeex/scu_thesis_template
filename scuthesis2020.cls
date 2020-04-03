@@ -32,6 +32,7 @@
 % 此文档类以 ctexbook 为基础，设定页面尺寸为 A4，默认字号为小四号。
 % CJKfntef 宏包提供了 \maketitle 中用到的 \CJKunderline 命令。
 \LoadClass[a4paper,UTF8,twoside, openright, zihao=-4,fontset=\kkfont]{ctexbook}
+
 % 加入hyperref超链接参考
 \RequirePackage{hyperref}
 % fancyhdr 宏包提供了方便使用的命令用于设置页眉、页脚。
@@ -67,10 +68,73 @@
 \captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
 \captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
 %设置字体
-% \RequirePackage{xeCJK}
+\RequirePackage{xeCJK}
 \RequirePackage{fontspec}
 % \setCJKmonofont{Simsun}
-\setmainfont{Times New Roman}
+% \setmainfont{Times New Roman}
+% 识别系统类型
+\newcommand\k@fontset{\csname g__ctex_fontset_tl\endcsname}
+\ifthenelse{\equal{\k@fontset}{fandol}}{
+  \setmainfont[
+    Extension      = .otf,
+    UprightFont    = *-regular,
+    BoldFont       = *-bold,
+    ItalicFont     = *-italic,
+    BoldItalicFont = *-bolditalic,
+  ]{texgyretermes}
+  \setsansfont[
+    Extension      = .otf,
+    UprightFont    = *-regular,
+    BoldFont       = *-bold,
+    ItalicFont     = *-italic,
+    BoldItalicFont = *-bolditalic,
+  ]{texgyreheros}
+  \setmonofont[
+    Extension      = .otf,
+    UprightFont    = *-regular,
+    BoldFont       = *-bold,
+    ItalicFont     = *-italic,
+    BoldItalicFont = *-bolditalic,
+    Scale          = MatchLowercase,
+  ]{texgyrecursor}
+}{
+  \setmainfont{Times New Roman}
+  \setsansfont{Arial}
+  \ifthenelse{\equal{\k@fontset}{mac}}{
+    \setmonofont[Scale=MatchLowercase]{Menlo}
+  }{
+    \setmonofont[Scale=MatchLowercase]{Courier New}
+  }
+}
+\ifthenelse{\equal{\k@fontset}{windows}}{
+  \xeCJKsetup{EmboldenFactor=2}
+  \IfFileExists{C:/bootfont.bin}{
+    \setCJKmainfont[AutoFakeBold,ItalicFont=KaiTi_GB2312]{SimSun}
+    \setCJKfamilyfont{zhkai}[AutoFakeBold]{KaiTi_GB2312}
+  }{
+    \setCJKmainfont[AutoFakeBold,ItalicFont=KaiTi]{SimSun}
+    \setCJKfamilyfont{zhkai}[AutoFakeBold]{KaiTi}
+  }
+  \setCJKsansfont[AutoFakeBold]{SimHei}
+  \setCJKfamilyfont{zhsong}[AutoFakeBold]{SimSun}
+  \setCJKfamilyfont{zhhei}[AutoFakeBold]{SimHei}
+}{}
+\ifthenelse{\equal{\k@fontset}{mac}}{
+  \setCJKmainfont[
+         UprightFont = * Light,
+            BoldFont = * Bold,
+          ItalicFont = Kaiti SC,
+      BoldItalicFont = Kaiti SC Bold,
+    ]{Songti SC}
+  \setCJKsansfont[BoldFont=* Medium]{Heiti SC}
+  \setCJKfamilyfont{zhsong}[
+         UprightFont = * Light,
+            BoldFont = * Bold,
+    ]{Songti SC}
+  \setCJKfamilyfont{zhhei}[BoldFont=* Medium]{Heiti SC}
+  \setCJKfamilyfont{zhkai}[BoldFont=* Bold]{Kaiti SC}
+  \xeCJKsetwidth{‘’“”}{1em}
+}{}
 
 %使用geometry调整边距
 \RequirePackage{geometry}
