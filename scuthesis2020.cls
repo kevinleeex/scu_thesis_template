@@ -555,12 +555,14 @@
 %设置声明
 \newcommand{\makestatement}{
 \ifthenelse{\equal{\approval}{0}}{
+	\cleardoublepage
+	\pagestyle{empty}
 	\begin{ENGinner}
 	\end{ENGinner}
-	\thispagestyle{empty}
-	\newpage
-	\thispagestyle{empty}
+	
+	% 中文声明
 	{
+		\cleardoublepage
 		\setlength{\baselineskip}{20pt}
 		\chapter*{声\hspace{1em}明}
 		\thispagestyle{empty}
@@ -569,9 +571,6 @@
 		本学位论文成果是本人在四川大学读书期间在导师指导下（或联合培养导师组合作指导下）取得的，论文成果归四川大学所有（或联合培养单位共有），特此声明。
 		\vspace{4cm}
 		\autograph
-		\thispagestyle{empty}
-		\newpage
-		\thispagestyle{empty}
 	}
 }{}
 % \ \\
@@ -614,7 +613,7 @@
 
 \newenvironment{ENGinner}
 {
-	\cleardoublepage
+
 	\renewcommand{\baselinestretch}{1.5}
 
 	\begin{center}
