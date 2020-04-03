@@ -296,12 +296,6 @@
 \RequirePackage{tocloft}
 % 目录中不显示目录项、图表目录项
 \RequirePackage[nottoc,notlof,notlot]{tocbibind}
-% 使用caption2宏包修改题注样式
-% \RequirePackage{caption2}
-% 修改题注样式
-\renewcommand{\captionfont}{
-\zihao{5}\rm\songti}
-% \renewcommand{\captionlabeldelim}{~}
 % 使用natbib宏包修改参考文献段间距
 \RequirePackage{natbib}
 \setlength{\bibsep}{0pt}
