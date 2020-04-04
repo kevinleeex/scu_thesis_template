@@ -56,8 +56,6 @@
 \floatname{algorithm}{算法}  
 \renewcommand{\algorithmicrequire}{\textbf{输入:}}  
 \renewcommand{\algorithmicensure}{\textbf{输出:}}
-% GBT7714引用格式
-\RequirePackage{gbt7714}
 
 % 此包用于双语图表标题
 \RequirePackage[list=off]{bicaption}
@@ -368,12 +366,15 @@
 % 定义 \incite 命令，用于如“文献[1]”这样的引用
 \newcommand*{\incite}{}
 \DeclareRobustCommand*{\incite}[1]{
-\begingroup
-% \romannumeral-`\x
-\setcitestyle{numbers}
-\hspace{-1em}~\cite{#1}\hspace{-0.3em}
-\endgroup
+	\begingroup
+	% \romannumeral-`\x
+	\setcitestyle{numbers}
+	\hspace{-1em}~\cite{#1}\hspace{-0.3em}
+	\endgroup
 }
+
+% GBT7714引用格式
+\RequirePackage{gbt7714}
 
 %定义破折号
 \newcommand{\cdash}[0]{\text{\ ——\ }}
