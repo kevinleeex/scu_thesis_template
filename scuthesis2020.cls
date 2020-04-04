@@ -373,8 +373,9 @@
 	\endgroup
 }
 
-% GBT7714引用格式
+% GBT7714-2015引用格式
 \RequirePackage{gbt7714}
+\citestyle{numerical}
 
 %定义破折号
 \newcommand{\cdash}[0]{\text{\ ——\ }}
