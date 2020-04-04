@@ -361,7 +361,7 @@
 % 目录中不显示目录项、图表目录项
 \RequirePackage[nottoc,notlof,notlot]{tocbibind}
 % 使用natbib宏包修改参考文献段间距
-\RequirePackage{natbib}
+\RequirePackage[sort&compress]{natbib}
 \setlength{\bibsep}{0pt}
 % 定义 \incite 命令，用于如“文献[1]”这样的引用
 \newcommand*{\incite}{}
