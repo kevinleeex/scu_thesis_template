@@ -307,7 +307,7 @@
 		\songti
 		\begin{tabular}{cl}
 			{注意事项：} & \multicolumn{1}{c}{按照双盲评阅要求，送审论文中不包含声明、致谢以及攻读学位期间取得的研究成果，} \\
-			\textbf{}      & 所有与作者本人以及导师相关的信息，均须做匿名处理。                                 
+			\textbf{}      & 所有与作者本人以及导师相关的信息，均须做匿名处理。
 		\end{tabular}
 	}
 	}{}
@@ -546,6 +546,7 @@
 % 设定封面页格式。
 \renewcommand\maketitle{
 \cleardoublepage
+\pagestyle{empty}
 \begin{titlepage}
 	\makescucoverhead
 	\begin{center}
