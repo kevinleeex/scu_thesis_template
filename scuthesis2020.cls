@@ -295,12 +295,21 @@
 		\\[17pt]
 		{\hspace{-0.7cm}\fontq\makebox[2.8cm][l]{\proffieldname ：}} & \hspace{-0.7cm}\fonta\fillinblank{8cm}{\@major}
 	\end{tabular}
-	\\[80pt]
+	\\[75pt]
 	\zihao{3}\songti
 	\begin{tabular}{c}
 		{\makebox[4cm][c]{\text{学位论文完成时间}}}\\[0.5cm]
 		{\makebox[4cm][c]{\text{\@accomplishdate}}}
 	\end{tabular}
+	\\[30pt]
+	{
+		\zihao{5}
+		\songti
+		\begin{tabular}{cl}
+			{注意事项：} & \multicolumn{1}{c}{按照双盲评阅要求，送审论文中不包含声明、致谢以及攻读学位期间取得的研究成果，} \\
+			\textbf{}      & 所有与作者本人以及导师相关的信息，均须做匿名处理。                                 
+		\end{tabular}
+	}
 	}{}
 }
 
