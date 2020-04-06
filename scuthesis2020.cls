@@ -295,7 +295,7 @@
 		\\[17pt]
 		{\hspace{-0.7cm}\fontq\makebox[2.8cm][l]{\proffieldname ：}} & \hspace{-0.7cm}\fonta\fillinblank{8cm}{\@major}
 	\end{tabular}
-	\\[75pt]
+	\\[70pt]
 	\zihao{3}\songti
 	\begin{tabular}{c}
 		{\makebox[4cm][c]{\text{学位论文完成时间}}}\\[0.5cm]
