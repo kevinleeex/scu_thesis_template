@@ -684,7 +684,6 @@
 {
 	\cleardoublepage
 	\zihao{5}
-	\setlength{\baselineskip}{16pt}
 }
 
 % 定义附录环境
