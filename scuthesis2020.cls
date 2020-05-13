@@ -4,7 +4,7 @@
 % 修改人：Kevin T. Lee [hello@lidengju.com]
 % 修改日期：2020年3月13日
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{./Template/scuthesis2020}[2020/01/17 v0.1]
+\ProvidesClass{./Template/scuthesis2020}[2020/05/13]
 
 % 加载key value options
 \RequirePackage{xkeyval}
@@ -643,7 +643,7 @@
 	\textbf{By} \\
 	\textbf{\@ENGauthor}\\
 	\textbf{Supervisor: \@ENGsupervisor}\\[3.4cm]
-	\textbf{\@ENGschool, Sichuan University, Chengdu, China}\\[0.8cm]
+	{\parbox[c]{15.8cm}{\centering\textbf{\@ENGschool, Sichuan University, Chengdu, China}}}\\[0.8cm]
 	\textbf{\@statementdate}
 	\end{center}
 	\ \vspace{0cm}\par
