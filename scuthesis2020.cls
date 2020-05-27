@@ -2,9 +2,9 @@
 % 文件描述：以 ctexbook 文档类为基础，定义四川大学学位论文文档类
 % 作者：LegendaryLeo
 % 修改人：Kevin T. Lee [hello@lidengju.com]
-% 修改日期：2020年5月13日
+% 修改日期：2020年5月27日
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{./Template/scuthesis2020}[2020/05/13]
+\ProvidesClass{./Template/scuthesis2020}[2020/05/27]
 
 % 加载key value options
 \RequirePackage{xkeyval}
@@ -369,9 +369,7 @@
 \RequirePackage{tocloft}
 % 目录中不显示目录项、图表目录项
 \RequirePackage[nottoc,notlof,notlot]{tocbibind}
-% 使用natbib宏包修改参考文献段间距
-\RequirePackage[sort&compress]{natbib}
-\setlength{\bibsep}{0pt}
+
 % 定义 \incite 命令，用于如“文献[1]”这样的引用
 \newcommand*{\incite}{}
 \DeclareRobustCommand*{\incite}[1]{
@@ -383,8 +381,11 @@
 }
 
 % GBT7714-2015引用格式
-\RequirePackage{gbt7714}
-\citestyle{numerical}
+\RequirePackage[sort&compress]{gbt7714}
+
+% 使用natbib宏包修改参考文献段间距
+\RequirePackage{natbib}
+\setlength{\bibsep}{0pt}
 
 %定义破折号
 \newcommand{\cdash}[0]{\text{\ ——\ }}
@@ -682,6 +683,7 @@
 % 定义参考文献环境
 \newenvironment{reference}
 {
+	\bibliographystyle{gbt7714-numerical}
 	\cleardoublepage
 	\zihao{5}
 }
