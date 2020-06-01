@@ -2,7 +2,7 @@
 % 文件描述：以 ctexbook 文档类为基础，定义四川大学学位论文文档类
 % 作者：LegendaryLeo
 % 修改人：Kevin T. Lee [hello@lidengju.com]
-% 修改日期：2020年5月27日
+% 修改日期：2020年6月1日
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{./Template/scuthesis2020}[2020/06/01]
 
