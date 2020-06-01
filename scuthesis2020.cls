@@ -4,7 +4,7 @@
 % 修改人：Kevin T. Lee [hello@lidengju.com]
 % 修改日期：2020年5月27日
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{./Template/scuthesis2020}[2020/05/27]
+\ProvidesClass{./Template/scuthesis2020}[2020/06/01]
 
 % 加载key value options
 \RequirePackage{xkeyval}
@@ -33,6 +33,8 @@
 % CJKfntef 宏包提供了 \maketitle 中用到的 \CJKunderline 命令。
 \LoadClass[a4paper,UTF8,twoside, openright, zihao=-4,fontset=\kkfont]{ctexbook}
 
+% 解图表目录引用编号顺序问题
+\RequirePackage{notoccite}
 % 加入hyperref超链接参考
 \RequirePackage{hyperref}
 % fancyhdr 宏包提供了方便使用的命令用于设置页眉、页脚。
