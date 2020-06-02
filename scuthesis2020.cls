@@ -621,7 +621,7 @@
 	\begin{center}
 		\begin{tabular*}{\textwidth}{p{0.5\textwidth}p{0.5\textwidth}}
 			\hspace{1.6em}学位论文作者签名：& 导师签名：\\[1cm]
-			\hspace{1.6em}签字日期：\quad 年 \quad 月 \quad 日 & 签字日期：\quad 年 \quad 月 \quad 日
+			\hspace{1.6em}签字日期：\qquad 年 \quad 月 \quad 日 & 签字日期：\qquad 年 \quad 月 \quad 日
 		\end{tabular*}
 	\end{center}
 }
