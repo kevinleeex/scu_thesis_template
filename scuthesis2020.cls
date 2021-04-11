@@ -63,10 +63,10 @@
 \RequirePackage[list=off]{bicaption}
 \RequirePackage{subcaption}
 \captionsetup{font={bf},bi-slc=0}
-\captionsetup[figure][bi-first]{name=图,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
-\captionsetup[figure][bi-second]{name=Figure,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
-\captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
-\captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont={rm,bf,footnotesize},font={rm,bf,footnotesize}}
+\captionsetup[figure][bi-first]{name=图,labelsep=quad,labelfont={rm,bf,small},font={rm,bf,small}}
+\captionsetup[figure][bi-second]{name=Figure,labelsep=quad,labelfont={rm,bf,small},font={rm,bf,small}}
+\captionsetup[table][bi-first]{name=表,labelsep=quad,labelfont={rm,bf,small},font={rm,bf,small}}
+\captionsetup[table][bi-second]{name=Table,labelsep=quad,labelfont={rm,bf,small},font={rm,bf,small}}
 % 修改图题和正文间距
 % \setlength{\belowcaptionskip}{-10pt}
 %设置字体
